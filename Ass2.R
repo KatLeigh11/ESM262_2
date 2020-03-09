@@ -15,22 +15,24 @@ countriez <- c("USA", "USA", "USA", "USA", "USA", "USA", "USA", "Indonesia", "In
 
 countz <- c(20, 15, 30, 50, 45, 5, 10, 100, 150, 300, 450, 250, 150, 50, 80, 70, 60, 65, 75, 25, 10)
 
-df_counts <- data.frame(countriez, countz)
+df_counts <- data.frame(countriez, countz) 
 
-df_counts
+df_counts2 <- df_counts %>% 
+  mutate(species = list("Scads", "Yellowstripe", "Mackerel", "Anchovies", "Sardinellas", "Ponyfishes", "Catfish","Scads", "Yellowstripe", "Mackerel", "Anchovies", "Sardinellas", "Ponyfishes", "Catfish","Scads", "Yellowstripe", "Mackerel", "Anchovies", "Sardinellas", "Ponyfishes", "Catfish"))
+
 
 fishy_FUNction <- function(prices, counts) {
-  
+
   fcountz <- df_counts %>%
-    group_by(countriez) %>% 
+    group_by(countriez) %>%
     summarize(sum(countz))
-    
-  frev <- df_counts %>% 
-    group_by(countriez) %>% 
+
+  frev <- df_counts %>%
+    group_by(countriez) %>%
     mutate(rev = countz * df_price$prices)
-  
-  frevloc <-frev %>% 
+
+  frevloc <-frev %>%
     summarise(Revenue = sum(rev))
-  
-  totfrev 
-  fgraph 
+
+  totfrev
+  fgraph
