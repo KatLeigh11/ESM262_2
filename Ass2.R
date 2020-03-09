@@ -33,4 +33,4 @@ fishy_FUNction <- function(prices, counts) {
     summarise(Revenue = sum(rev))
   
   totfrev 
-  fgraph
+  fgraph 
