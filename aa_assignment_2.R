@@ -29,7 +29,7 @@ frev <- df_counts %>%
 
 summary(fish_data)
 
-fish_function<- function (fish_data) {
+fish_function<- function (fish_data, fish_graph) {
   max_usa = max(usa)
   max_indo = max(indonesia)
   max_phil = max(philippines)
@@ -55,12 +55,11 @@ fish_function<- function (fish_data) {
   plot_df <- data.frame(locations, total_all)
   fish_plot <- ggplot(plot_df, aes(x = locations, y = total_all))+
     geom_col()
-  #fish_graph = ifelse((fish_graph = 0), return("No graph"), fish_plot)
-  return(list(max = c(max_usa, max_indo, max_phil), dominant = c(dominant_usa, dominant_indo, dominant_phil), revenues = c(total_usa, total_indo, total_phil), rcountries = c(rev_usa, rev_indo, rev_phil), fishery_total = totrev))
+  fish_graph = ifelse((fish_graph == 0), return("No graph"), fish_plot)
+  return(list(max = c(max_usa, max_indo, max_phil), dominant = c(dominant_usa, dominant_indo, dominant_phil), revenues = c(total_usa, total_indo, total_phil), rcountries = c(rev_usa, rev_indo, rev_phil), fishery_total = totrev, fish_graph))
 }
 
-
-fish_function(fish_data)
+fish_function(fish_data, 0)
 
 
 
