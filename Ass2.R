@@ -17,8 +17,6 @@ countz <- c(20, 15, 30, 50, 45, 5, 10, 100, 150, 300, 450, 250, 150, 50, 80, 70,
 
 df_counts <- data.frame(countriez, countz) 
 
-df_counts2 <- df_counts %>% 
-  mutate(species = list("Scads", "Yellowstripe", "Mackerel", "Anchovies", "Sardinellas", "Ponyfishes", "Catfish","Scads", "Yellowstripe", "Mackerel", "Anchovies", "Sardinellas", "Ponyfishes", "Catfish","Scads", "Yellowstripe", "Mackerel", "Anchovies", "Sardinellas", "Ponyfishes", "Catfish"))
 
 
 fishy_FUNction <- function(prices, counts) {
