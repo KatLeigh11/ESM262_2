@@ -1,3 +1,5 @@
+library(tidyverse)
+
 #price data frame
 species <- c("Scads", "Yellowstripe", "Mackerel", "Anchovies", "Sardinellas", "Ponyfishes", "Catfish")
 
@@ -58,7 +60,7 @@ fish_function<- function (fish_data) {
 }
 
 
-fish_function(fish_data)#, 0)
+fish_function(fish_data)
 
 
 
